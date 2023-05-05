@@ -1,0 +1,121 @@
+<!-- write a program to hide and show text -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: #A0D8B3;
+            --button: #A2A378;
+            --text: #83764F;
+            --white: #fff;
+            --black: #000;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container__main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .container__body {
+            width: 40%;
+            padding: 4rem 2rem;
+            height: auto;
+            margin: auto;
+            background-color: var(--background);
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .container__text {
+            color: var(--text);
+            margin-bottom: 2rem;
+
+        }
+
+        .container__button {
+            padding: 1.5rem 4rem;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--button);
+            font-weight: bold;
+            color: var(--white);
+        }
+
+        .container__text h1 {
+            height: 40px;
+
+
+        }
+
+        .container__button:hover {
+            background-color: var(--white);
+            color: var(--black);
+            transition: all 1s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container__main">
+
+        <div class="container__body">
+            <div class="container__text">
+                <H1 id="text">Click To Hide OR Show </H1>
+            </div>
+
+            <div>
+                <button class="container__button" id="show">Show</button>
+                <button class="container__button" id="hide">Hide</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const show = document.getElementById("show");
+        const hide = document.getElementById("hide");
+        const text = document.getElementById("text");
+
+        show.addEventListener("click", () => {
+
+            text.innerHTML = "Click To Hide OR   Show";
+
+        });
+
+        hide.addEventListener("click", () => {
+
+            text.innerHTML = "";
+
+        });
+    </script>
+
+</body>
+
+</html>
